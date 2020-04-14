@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container = mt-5">
+
+    <form action="/add" method="post">
+        <input required type="text" style="width:1000px" name="link" placeholder="Введите ссылку" class="from-control" ><br><br>
+        <input required type="text" style="width:1000px" name="abbName" placeholder="Введите сокращенную ссылку" class="from-control"><br><br>
+        <button type="submit" class="btn btn-success">Добавить</button><br>
+    </form>
+
+    <hr>
+
+    <table>
+        {{#link_db}}
+            <tr>
+                <td>
+                    <p>- Сокращение: </p>
+                </td>
+
+                <td>
+                    <a href="http://{{link}}">{{abbName}}</a>
+                </td>
+            </tr>
+
+        {{/link_db}}
+    </table>
+
+
+
+
+
+</div>
+
+</body>
+</html>
